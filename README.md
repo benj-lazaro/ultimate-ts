@@ -1,2 +1,2 @@
 # Ultimate TypeScript
-Notes from Mosh Hamedani's Ultimate TypeScript Course
+Notes from Mosh Hamedani's Ultimate TypeScript course
