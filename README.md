@@ -1,2 +1,2 @@
-# ultimate-ts
-Notes on TypeScript
+# Ultimate TypeScript
+Notes from Mosh Hamedani's Ultimate TypeScript Course
