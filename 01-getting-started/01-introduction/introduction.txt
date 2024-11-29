@@ -1,9 +1,0 @@
-Introduction
-------------
-- This section covers the following:
-    - Introduction to TypeScript
-    - Setting up the development environment
-    - Create the 1st TypeScript program
-    - Configure the TypeScript compiler
-    - Debugging TypeScript applications
-    
