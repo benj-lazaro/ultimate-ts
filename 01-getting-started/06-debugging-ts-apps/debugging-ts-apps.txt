@@ -1,0 +1,111 @@
+Debugging TypeScript Applications
+---------------------------------
+- How to debug TypeScript applications in VS Code
+    - Open the file "tsconfig.json"
+
+    - On the section "Emit"
+        - Uncomment setting "sourceMap"
+
+    - The setting "sourceMap"
+        - It is a file that specifies 
+        - How each line of the TypeScript code "maps" to generated JavaScript code
+
+    - Save the changes
+    
+
+- Recompile the source file (index.ts) via terminal
+
+    tsc
+
+    - A new file named "index.js.map" is created in the folder "dist"
+
+
+- On the folder "dist"
+    - Open the file "index.js.map"
+
+        {"version":3,"file":"index.js","sourceRoot":"","sources":["../src/index.ts"],"names":[],"mappings":";AAAA,IAAI,GAAG,GAAW,EAAE,CAAC"}
+
+    - The content labeled "mappings" contains the "map"
+        - This is meant to be read by a debugger; NOT humans
+
+
+- On the folder "src"
+    - Open the file "index.ts"
+
+    - Update the source by adding an "if" statement
+
+        if (age < 50) age += 10;
+
+
+    - Insert a breakpoint on the "let" statement
+        - By clicking the left-hand side of the code's line number
+
+        - Starting from this breakpoint
+            - The code will then be executed line-by-line
+
+    - Click VS Code's "Run and Debug" panel (CTRL + SHIFT + D)
+        - Click the link "create a launch.json file"
+            - Creates a file "launch.json"
+            - This informs VS Code how to debug this application
+
+        - Select "Node.js" from the provided drop-down list of options
+            - Node.js will be used to launch the file "launch.json"
+
+
+    - On the "launch.json" file
+        - Right after the setting "program"
+        
+        - Add the setting "preLaunchTask"
+            - Assign the value "tsc: build - tsconfig.json"
+
+            "program": "${file}",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+
+            // Alternative settings
+            "program": "${file}",
+            "preLaunchTask": "tsc: build - 01-getting-started/06-debugging-ts-apps/code/tsconfig.json",
+
+
+        - This setting informs VS Code
+            - To use the TypeScript compiler
+            - To build this application using the config file "tsconfig.json"
+
+        - Save the changes
+
+    
+    - Switch back the "index.ts"
+        - Click VS Code's "Run and Debug" panel (CTRL + SHIFT + D)
+
+        - Click the button "Launch Program" or press F5
+
+        - Breakpoint "pointer" stop at Line 01
+            - This is where the breakpoint was created
+
+        - The "Step Over" (F10)
+            - Executes one line of code at a time
+
+        - The "Step Into" (F11)
+            - Steps into a function
+
+        - The "Step Out" (SHIFT + F11)
+            - Steps out from a function
+
+        - The "Restart" (SHIFT + CTRL + F5)
+            - Restarts the debugging process
+
+        - The "Stop" (SHIFT + F5)
+            - Stops the debugging
+
+        - On the left-hand panel
+            - Expanding "VARIABLES"
+                - Displays the detected "Global" & "Local" variables used by the application
+
+            - Expanding "WATCH"
+                - Allows to add variables to be watched
+                    - Click the "+"
+                    - Followed by the name of a variable
+
+                - To remove a variable
+                    - Click the corresponding "x"
+
+    
