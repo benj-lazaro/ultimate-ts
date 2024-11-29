@@ -1,0 +1,85 @@
+Configuring the TypeScript Compiler
+-----------------------------------
+- To create a configuration for the TypeScript compiler via terminal
+
+    tsc --init
+
+
+    - Creates a new file named "tsconfig.json"
+    - Prompts the default settings on the terminal
+
+   
+- To configure the TypeScript compiler settings
+    - Open the file "tsconfig.json"
+
+    - By default, most of the settings are COMMENTED OUT
+
+    - The setting "target"
+        - Specifies the JavaScript version that the TypeScript compiler
+            - Will use to generated the corresponding JavaScript code
+        
+        - By default, it is set to "ES2016"
+            - It is considered an old standard & implemented on all browsers
+            - NOTE: This is the SAFEST ECMASCript version 
+
+        - To display supported ECMASCript versions
+            - Delete "ES2016"
+            - Press CTRL + SPACE
+            - A list of valid ECMASCript versions
+
+
+    - The setting "rootDir"
+        - Specifies the folder that contains the source file(s) i.e. TypeScript code
+        
+        - Uncomment this setting
+        
+        - On the project folder
+            - Create a new folder named "src"
+            - Move the recently created file "index.ts" into the folder
+            - Then delete the generated JavaScript file "index.js"
+
+        - Change the initial value to "./src"
+
+
+    - The setting "outDir"
+        - Specifies the folder that contains the generated JavaScript file(s)
+
+        - Uncomment this setting
+
+        - On the project folder
+            - Create a new folder named "dist"
+
+        - Change the initial value to "./dist"
+
+
+    - The setting "removeComments"
+        - Specifies the TypeScript compiler to remove ALL comments from the TypeScript code
+            - To ensure that the generated JavaScript is shorter
+
+        - Uncomment this setting
+            - Leave the default value of "true" as is
+
+
+    - The setting "noEmitOnError"
+        - By default, the TypeScript compiler will generate the corresponding JavaScript code
+            - Despite the presence of error(s) in the TypeScript code
+
+        - Uncomment this setting
+            - Leave the default value of "true" as is
+
+        - Enabling this setting
+            - Prevents the TypeScript compiler from generating JavaScript code
+            - Whenever a TypeScript code error(s) is/are present
+
+
+    - Save the changes
+
+
+- Recompile the previously created "index.ts" on the terminal
+
+    tsc
+
+
+    - NO need to specify the source file (i.e. index.ts)
+        - TypeScript compiler picks up source file(s) from the folder "src"
+        - Store the generated JavaScript file(s) to the folder "dist"
