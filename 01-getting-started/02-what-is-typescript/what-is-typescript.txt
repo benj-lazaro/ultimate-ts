@@ -1,0 +1,39 @@
+What is TypeScript
+------------------
+- TypeScript is a programming language
+    - Created by Microsoft
+
+    - Designed to address the shortcomings of JavaScript
+
+    - Built on top of JavaScript
+        - Essentially a JavaScript file is a valid TypeScript file
+
+
+- Benefits
+    - Static Typing
+        - Able to identify the data type of a variable at compile time / during coding
+        - TypeScript is essentially "JavaScript with Type Checking"
+
+    - Code Completion
+    - Refactoring
+    - Shorthand Notations 
+        - Supported by modern-day code editors
+        - That offers these productivity features
+
+
+- Drawbacks
+    - The complitation step is ALWAYS involved
+        - Due to modern-day browsers do NOT undrestand TypeScript code
+
+        - Requires for the TypeScript compilter to TRANSLATE TypeScript into JavaScript code
+            - This process is known as TRANSPILATION
+
+    - Requires discipline (and fore thought) when writing TypeScript code
+        - Discourages writing code quickly
+
+        - More time is wasted on coding large projects in JavaScript
+            - This requires time to catch nasty bugs
+
+        - Recommended to use
+            - TypeScript for meduim to large projects
+            - JavaScript for simple projects
