@@ -1,0 +1,36 @@
+Your First TypeScript Program
+-----------------------------
+- Create a new file named "index.ts"
+    - Every TypeScript file should have the file extension ".ts"
+    
+
+- Declare a variable named "age"
+    - Annotate with it with the data type of "number"
+        - By typing a ":" followed by a variable (i.e. number)
+        - This annotates or explains the value assigned to the variable
+        
+        - NOTE: This is purely for the TypeScript compiler ONLY
+            - The TRANSPILED JavaScript code does NOT carry over said annotation
+
+    - Assign the variable "age" with an initial value of 20
+
+        let age: number = 20;
+
+
+- Then compile the TypeScript file on terminal
+
+    tsc index.ts
+
+
+- Produces a corresponding JavaScript file named "index.js"
+    - Contains the corresponding JavaScript code
+
+        var age = 20;
+
+    - By default, the TypeScript compiler uses the ES5 implementation of JavaScript
+        - ECMAScript is the standard or specification of a language
+        - JavaScript is the implementation of said ECMAScript standard / specification
+
+    - ES5 or ES2015 is an old standard / specification 
+        - It has been around for a long-time
+        - Most of its features have been implemented on all browsers
