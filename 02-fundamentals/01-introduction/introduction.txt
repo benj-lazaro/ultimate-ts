@@ -1,0 +1,9 @@
+Introduction
+------------
+- This section covers the following topics:
+    - The "any" type
+    - Arrays
+    - Tuples
+    - Enums
+    - Functions
+    - Objects
