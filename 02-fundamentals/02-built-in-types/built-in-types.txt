@@ -1,0 +1,33 @@
+Built-in Types
+--------------
+- JavaScript has built-in types
+    - number
+    - string
+    - boolean
+    - string
+    - undefined
+    - object
+
+
+- TypeScript has the same built-in types with the adddition of the following:
+    - any
+    - unknown
+    - never
+    - enum
+    - tuple
+
+
+- In TypeScript, a variable is NOT necessarily needed to be annotated with a data type
+    - The TypeScript compiler infers or detects the data type
+        - Based on the initial value
+
+        - NOTE: Hovering the mouse point over a variable
+            - VS code reveals the annotated built-in type of a variable
+
+    - For variables without an initial value
+        - The TypeScript compiler annotates it with the "any" data type
+
+
+- NOTE: built-in type of number
+    - Large numbers can be visually separated using an underscore (_) character
+    - This is ONLY for readability purposes
