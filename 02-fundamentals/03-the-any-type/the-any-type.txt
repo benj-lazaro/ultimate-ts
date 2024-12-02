@@ -1,0 +1,26 @@
+The any Type
+------------
+- This represents any types of values
+    - TypeScript compiler assigns a type of "any" to an uninitialized variable
+
+    - Assigning a type of "any" to a variable
+        - Loses the "type checking" feature
+            - The major benefit of using TypeScript
+
+        - Best practice
+            - AVOID assigning the type "any" to a variable
+
+
+- TypeScript compiler ALWAYS triggers a compilation error
+    - For implicit assignment of type "any" on a variable
+    
+    - There is a way to override this setting
+        - Open the file "tsconfig.json"
+        - Uncomment the setting "noImplicitAny"
+        - Change the initial value of "true" to "false"
+        - Save the changes
+
+        - NOTE: Use this with CAUTION
+            - Do NOT use it UNLESS you know that you are doing
+            - Otherwise, there is NO point using TypeScript
+            - This loses the "type checking" feature of the language
