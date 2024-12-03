@@ -1,0 +1,26 @@
+Arrays
+------
+- Declaring an array in TypeScript
+    - Optionally explictly annotate the data type of its elements
+        - Triggers a compilation error
+        - When an element is NOT of the declared data type
+
+    - TypeScript compiler can infer (or guess) the data type
+        - Based from the data type of its elements
+
+
+Syntax:
+
+    let <variable_name>: <data_type>[] = [<element_value_1>, <element_value_n>]
+
+    let <variable_name> = [<element_value_1>, <element_value_n>]
+
+
+- When declaring an empty array
+    - It is best to annotate it with a specific data type
+    
+    - Otherwise, the TypeScript compiler will assign an "any" data type
+        - This will loose the "type checking" feature 
+
+
+
