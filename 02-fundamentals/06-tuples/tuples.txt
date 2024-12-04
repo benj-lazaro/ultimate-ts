@@ -1,0 +1,25 @@
+Tuples
+------
+- A tuple is a FIXED LENGTH array
+    - Each element of a tuple has a particular data type
+        - Internally a JavaScript array with "strict mode" enabled
+
+    - Tuples are often used when working with a pair of values
+
+    - BEST PRACTICE
+        - Restrict tuples to ONLY two (2) values
+        - Anything more will make the code difficult to understand
+
+    - A TypeScript compilation error is triggered when
+        - An additional element's data type has NOT been declared in the type annotation
+        - An element's data type does NOT match with it's declared type annotation
+
+
+Syntax:
+
+    let <variable_name>: [<data_type_1>, <data_type_n>] = [<data_type_1>, <data_type_n>];
+
+
+- NOTE: Using the method ".push()" on a tuple will NOT trigger a compilation error
+    - Despite having NO provision to annotate the new element's data type    
+    - Adding a new element to an otherwise FIXED LENGTH data structure
