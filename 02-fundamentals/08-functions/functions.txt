@@ -1,0 +1,44 @@
+Functions
+---------
+- BEST PRACTICE
+    - ALWAYS properly annotate the data type 
+        - Of a function's parameter(s) & return value
+
+        - NOTE: Provides the benefit of immediately triggering a compilation error
+            - When a return value is that of a different data type
+    
+    - Annotate the return value with the data type "void"
+        - When a function does NOT return a value
+    
+    - Placing a "?" right after a parameter variable
+        - Makes the specific parameter OPTIONAL 
+
+    - Placing a "=" followed by a corresponding value after a parameter variable
+        - Assigns the value as the default value for the corresponding parameter variable
+
+
+Syntax:
+
+    function <name>(<parameter>: <data_type>): <return_value_data_type> {
+        ...
+    }
+
+
+- To help detect unintended bugs in the code
+    - Open the file "tsconfig.json"
+        - Proceed to the section "Type Checking"
+        
+    - The following compiler options are NOT part of the enabled "strict" setting
+        - Enable the option "noUsedParameters"
+            - Triggers an error for the presence of unused parameter variable(s)
+
+        - Enable the option "noImplicitReturns"
+            - Triggers an error when a function returns a value of "undefined"
+            
+            - By default, JavaScript functon implicitly returns a value of "undefined"
+
+        - Enable the option "noUnusedLocals"
+            - Triggers an error when a declared local variable(s) whose value is NEVER read / used
+
+
+    
