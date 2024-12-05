@@ -1,0 +1,9 @@
+Introduction
+------------
+- This section covers the following topics:
+    - Type alias
+    - Unions & intersections
+    - Type narrowing
+    - Nullable types 
+    - The "unknown" type
+    - The "never" type
