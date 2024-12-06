@@ -1,0 +1,17 @@
+Union Types
+-----------
+- A union type is the combination of more than one (1) data type
+    - It allows a function's parameter variable to have more than one (1) data type
+      
+    - It uses the "|" in-between data types
+        - To define the supported types of a parameter variable 
+
+    - NOTE: Narrowing is a technique that "narrows down" 
+        - A Union data type into a specific data type
+
+
+Syntax:
+
+    function <name>(<parameter_variable>: <data_type_1> | <data_type_n>) {
+        ...
+    }
