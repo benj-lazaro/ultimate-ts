@@ -1,0 +1,11 @@
+Intersection Types
+------------------
+- Intersection is a technique of combining 
+    - One or more custom data types using Type aliases
+        - Using the "&" between custom data types
+        - To combine into an Intersection data type
+
+
+Syntax:
+
+    type <intersection_data_type> = custom_data_type_1 & <custom_data_type_n>;
