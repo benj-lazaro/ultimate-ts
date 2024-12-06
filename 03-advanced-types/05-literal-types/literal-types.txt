@@ -1,0 +1,24 @@
+Literal Types
+-------------
+- Limits the assigned value to a variable
+    - By annotating the variable with the assigned value
+
+    - A compilation error is triggered when
+        - Assigning a variable with a different value
+        - From that of the annotated literal type
+
+    - The union operator "|" can be used to 
+        - Hardcode two or more literal data types to a variable
+
+    - Use Type alias to define a custom data type
+        - Use the union operator "|" for the literal types
+        - Then annotate the custom data type to the variable
+    
+
+Syntax:
+
+    let <variable_name>: <literal_type> = <assigned_value>;
+
+    let <variable_name>: <literal_type_1> | <literal_type_n> = <assigned_value>;
+
+    let <variable_name>: <custom_data_type> = <assigned_value>;
