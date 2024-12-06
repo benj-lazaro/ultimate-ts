@@ -1,0 +1,26 @@
+Type Aliases
+------------
+- It offers a single place
+    - To define the "shape" (properties) of a custom data type
+
+    - Refrains from repeating pieces of code (e.g. object properties & methods)
+        - Enforces the DRY (Don't Repeat Yourself) principle
+
+    - It employs the Pascal naming convention for naming a Type alias
+
+    - It contains
+        - The properties and methods of an object
+        - Including their corresponding data types
+
+    - The type alias is then annotated to the corresponding variable / constant
+        - Reusable on mulitple places without repeating the same piece of code
+
+
+Syntax:
+
+    type <name> = {
+        <property>: <data_type>;
+        <method>: <data_type>;
+        ...
+    };
+
