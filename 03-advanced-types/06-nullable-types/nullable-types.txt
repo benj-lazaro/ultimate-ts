@@ -1,0 +1,10 @@
+Nullable Types
+--------------
+- By default, TypeScript is VERY strict on using "null" & "undefined" values
+    - As these values are COMMON SOURCE of bugs in an application
+    
+
+- In order for TypeScript to work with data types of "null" and "undefined"
+    - On declaring a function's parameter variable's data type
+    - Annotate the parameter variable using a Union operator "|"
+        - Then add the data types "null" and/or "undefined"
