@@ -1,0 +1,35 @@
+Optional Chaining
+-----------------
+- When working with object of "Nullable" type
+    - Null checks are required
+        - Performed by chaining check using the logical AND operator "&&" in an "if" statement
+    
+    - Better to use "Optional chaining"
+        - Prefixing an object's property with an Optional Property Access operator "?."
+
+        - The object's property is ONLY accessed when
+            - There is a value that is NOT "null" or "undefined"
+    
+
+Syntax:
+
+    <object>?.<property>;
+
+
+- When using "Optional chaining" with arrays
+    - Use the Optional Element Access operator "?."
+
+
+Syntax:
+
+    <array>?.[<element_index>];
+
+
+- When using "Optional chaining" with functions
+    - Use the Optional Call operator "?."
+
+
+Syntax:
+
+    <function>?.(<argument_value_NOT_null_undefined>);
+    
