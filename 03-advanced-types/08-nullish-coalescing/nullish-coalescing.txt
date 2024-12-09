@@ -1,0 +1,16 @@
+Nullish Coalescing Operator
+---------------------------
+- The Nullish coalescing operator "??"
+    - Allows to work with falsy values "null" or "undefined"
+
+    - This provides the ability to work on an initial value of data type "null" or "undefined"
+        - Returns a pre-defined value 
+
+    - NOTE: In JavaScript falsy values (e.g. null, undefined, false & 0)
+        - Are ignored when placed in an expression or work with a conditional statement
+
+
+Syntax:
+
+    <first_value> ?? <second_value>;
+
