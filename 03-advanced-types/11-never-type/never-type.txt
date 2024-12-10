@@ -1,0 +1,14 @@
+The Never Type
+--------------
+- The "never" data type represents values that NEVER occurs
+    - A data type that is NOT used that often
+
+
+- A function annotated with "never" data type 
+    - Throws a Typescript compilation error
+        - Because it can NOT have a reachable end-point
+
+    - Setting the Typescript compiler "allowUnreachableCode" to false
+        - Triggers another Typescript compilation error
+        - Highlights the piece of code that is NOT reachable (executed)
+
