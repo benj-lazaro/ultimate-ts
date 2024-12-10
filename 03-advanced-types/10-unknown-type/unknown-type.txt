@@ -1,0 +1,14 @@
+The Unknown Type
+----------------
+- The data type "unknown" is used
+    - When a situation requires using an "any" type
+
+    - It enforces the TypeScript compiler to perform type checking
+        - To ensure that associated method(s) of the target object exists
+
+    - It enforces "type guarding" by narrowing the data type
+        - Use "typeof" for primitive data types
+        - Use "instanceof" for custom data types 
+
+    - NOTE: "unknown" is PREFERRED over "any"
+        - AVOID using the data type "any" at all cost
