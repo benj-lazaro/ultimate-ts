@@ -1,0 +1,17 @@
+Type Assertions
+---------------
+- 1st implementation of Type assertion is to use the keyword "as"
+
+- 2nd implementation is to prefix the expression with a pair of "<>"
+    - Inside the pair of "<>" declare the expected data type
+
+- NOTE: Type assertion does NOT perform data type conversion
+    - EXPLICITLY informs (asserts) the TypeScript compiler 
+        - Of the expected data type from an object
+
+
+Syntax:
+
+    let <variable_name> = <object_name>.<method_name>() as <expected_data_type>;
+
+    let <variable_name> = <<expected_data_type>> <object_name>.<method_name>();
