@@ -1,0 +1,37 @@
+Creating Classes
+----------------
+- To create an object
+    - First create a class   
+
+    - A class is a blueprint for creating objects
+        - It is like an object factory
+
+    - Pascal naming convention is used for naming a class
+
+    - The defined properties of a class
+        - Is EXCLUSIVELY used by TypeScript ONLY
+        - The generated JavaScript code does NOT include this 
+
+- A Constructor is a special function / method inside a class
+    - It is used for initializing an object
+
+    - This can NOT have a return data type annotation
+        - Because it ALWAYS return an instance of the class
+
+    - The keyword "this" reference the current class
+        - Where the constructor is being executed on
+
+
+Syntax:
+
+    class <name> {
+        <property_name>: <data_type>;
+
+        constructor(<property_name>: <data_type>, ... ){
+            this.<property_name> = <property_name>;
+        }
+
+        <method_name>(<parameter_variable>: <data_type>): void {
+            // method body
+        }
+    }
