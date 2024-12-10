@@ -1,0 +1,18 @@
+What is Object-Oriented Programming
+-----------------------------------
+- OOP is one of the many paradigms of programming
+    - It is a style or ways of writing code
+    - Where in objects are the building blocks of an application
+
+
+- An object is a unit that contains
+    - Data (state)
+        - These represent the properties of an object
+        - Think of them as variables that ONLY exists inside an object
+
+    - Operations (behavior)
+        - These represent the method(s) of an object
+        - Think of them as functions inside an object
+
+    - Each object is responsible for a single task
+    
