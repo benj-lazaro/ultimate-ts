@@ -1,0 +1,29 @@
+Creating Objects
+----------------
+- To create an object from a class
+    - Use the keyword "new"
+    - Followed by the name of an existing class
+    - Then store the instance of the class (i.e. object) in a variable
+    
+
+Syntax:
+
+    let <variable_name> = new <class_name>(
+        <value_assigned_to_class_property>,
+        ...
+    );
+
+
+- To determine if an object is an instance of a class
+    - Use the keyword "instanceof" 
+    - Followed by a class name
+    - Returns a boolean value of "true" or "false"
+
+    - NOTE: This is useful when identifying a custom object
+        - Using the keyword "typeof"
+        - ALWAYS return the value "object"
+
+- NOTE: VS Code color code tips
+    - Object properties are colored in Blue
+    - Object methods are colored in Purple
+
