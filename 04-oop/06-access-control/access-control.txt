@@ -1,0 +1,35 @@
+Access Control Keywords
+-----------------------
+- Three (3) access modifiers that control access to a class' properties / methods
+    - "public"
+        - Default control access of a class' properties & methods
+            - NO need to use prefix a property / method with "public"
+
+    - "private"
+        - Limits access to a property / method ONLY WITHIN its own class
+
+        - Access to a property / method from outside the class
+            - Triggers a TypeScript compilation error
+
+        - By convention
+            - The property / method name should be prefixed with "_"
+
+        - To access the stored value in a "private" property
+            - Create a method that returns the value
+
+        - NOTE: Do NOT use this for storing sentive data (e.g. credit card, password, etc.)
+            - This is ONLY used for writing robust code
+
+    - "protected"
+
+
+Syntax:
+
+    class <class_name> {
+        <property_name>: <data_type>;
+        ...
+        private <property_name>: <data_type>;
+        ...
+        protected <property_name>: <data_type>;
+        ...
+    }
