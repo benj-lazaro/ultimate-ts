@@ -1,0 +1,32 @@
+Read-only & Optional Properties
+-------------------------------
+- In TypeScript there are modifiers applied to the properties of a class
+    - That help write robust code
+
+
+- The property modifier "readonly"
+    - Prefix the keyword "readonly" on a class' property
+
+    - This property can ONLY be set
+        - Within the corresponding constructor of the class
+
+    - Attempts to assign a new value to the property anywhere else
+        - Triggers a TypeScript compilation error
+
+
+- The property modifier "?"
+    - Append the operator "?" right after the property's name
+
+    - Allows the property to be assigned with a value of "undefined"
+        - Does NOT trigger a TypeScript compilation error
+        - When a property is NOT assigned with a value
+
+
+Syntax:
+
+    class <class_name> {
+        readonly <property_name>: <data_type>;
+        ...
+        <property_name>?: <data_type>;
+        ...
+    }
