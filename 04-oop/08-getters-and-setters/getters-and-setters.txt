@@ -1,0 +1,32 @@
+Getters and Setters 
+-------------------
+- Accessing a method of a class (object) like a property
+
+
+- To declare a Getter
+    - Prefix a method of a class with the keyword "get"
+
+    - This is a class method that
+        - Gets or retrieves the current value of a property
+
+
+- To declare a Setter
+    - Prefix a method of class with the keyword "set"
+
+    - This is a class method that
+        - Sets or replaces the existing value of a property
+
+
+Syntax: 
+
+    class <class_name> {
+        ...
+
+        get <method_name>(): <data_type> {
+            // body of a getter method
+        }
+
+        set <method_name>(<paramter_variable>): <data_type> {
+            // body of setter method
+        }
+    }
