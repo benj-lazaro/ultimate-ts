@@ -1,0 +1,21 @@
+Parameter Properties
+--------------------
+- This is a feature that helps write a concise class constructor
+    - It uses the constructor's parameter variables
+        - To define & initialize a class' properties
+        - Prefixing each parameter with a corresponding Access modifier 
+        - With the EXCEPTION of optional properties
+
+
+
+Syntax:
+
+    class <class_name> {
+        ...
+
+        constructor(
+            <access_modifier> <property>: <data_type>, ...
+        ) {
+            
+        }
+    }
