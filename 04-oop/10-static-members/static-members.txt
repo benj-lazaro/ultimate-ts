@@ -1,0 +1,32 @@
+Static Members
+--------------
+- A static property belong ONLY to a class
+    - It does NOT belong to the instantiated object from said class
+
+    - Think of it as a sort-of Global variable
+        - Only one (1) instance of this property that is active in memory
+
+
+- To declare a static property in a class
+    - Prefix the class property with the keyword "static"
+        - Prefix the "static" class property with the keyword "private"
+        - NOTE: Prevents from being accessed / updated anywhere in the code
+
+    - NOTE: Do NOT forget to prefix the property name with "_"
+
+
+- Declare a static getter method
+    - To return the current value of the targeted "private static" class property
+
+
+Syntax:
+
+    class <class_name> {
+        private static _<class_property>: <data_type>;
+        ...
+
+        static get <class_method>() {
+            return <static_class_property>;
+        }
+
+    }
