@@ -1,16 +1,12 @@
 Index Signatures
 ----------------
 - Index signatures allows TypeScript
-    - To define a property in a class
-        - That will allow to dynamically append new properties
+    - To define a class that is capable to adding new properties dynamically
+        - Similar to JavaScript EXCEPT with the benefit of "Type Checking"
 
-    - Similar to that of JavaScript
-        - Except with the benefit of "Type Checking" c/o TypeScript
-
-
-- Dynamically append new properties to an object using
-    - The "." notation
-    - The "[]" notation
+    - Dynamically append new properties on the instantiated object using
+        - "." notation
+        - "[]" notation
 
 
 Syntax:
@@ -21,6 +17,7 @@ Syntax:
     }
 
     let <object_name> = new <class_name>();
-    
+
     <object_name>.<new_property_name> = <assigned_value>;
+    
     <object_name>[<new_property_name>] = <assigned_value>;
