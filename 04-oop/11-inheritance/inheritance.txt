@@ -1,0 +1,49 @@
+Inheritance
+-----------
+- It is a mechanism that allows to re-use code
+    - Offers the feature to write a Base | Parent | Super class
+        - Containing a collection of common properties and/or methods
+
+    - Write a Child | Derived | Sub class based from the Parent class
+        - Effectively inheriting properties and/or methods
+
+
+- When creating a Child Class
+    - Add the keyword "extends" after the name of the Child class
+        - Followed by the name of the Parent class
+
+    - On the Child class' constructor methods
+        - Pass the properties SPECIFIC for this class
+        - Along with the Parent class' properties
+            - MINUS the Access modifier "public"
+            - Since they've already been declared in the Parent class
+
+        - Call the function "super()"
+            - To reference the Parent class (and its properties)
+            - Pass the properties of the Parent method as argument
+
+    - NOTE: Best pratice to implement each class on their own separate file
+    
+    
+Syntax:
+
+    class <parent_class_name> {
+        cosntructor(public <parent_class_property>, ...) {
+            ...
+        }
+
+        <parent_class_method>() {
+            ...
+        }
+    }
+
+    class <child_class_name> extends <parent_class_name> {
+        constructor(public <child_class_property>, <parent_class_property>, ...) {
+            super(<parent_class_property>, ...);
+        }
+
+        <child_class_method>() [
+            ...
+        ]
+    }
+
