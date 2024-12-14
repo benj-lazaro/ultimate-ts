@@ -1,0 +1,61 @@
+Method Overriding
+-----------------
+- The ability to implement changes in the implementation
+    - Of an inherited method from a Parent class
+
+
+- To implement method overriding in the Child class
+    - Copy the targeted method from the Parent class
+
+    - Prefix the name of the method with the keyword "override"
+
+    - Implement the changes 
+
+    - NOTE: If needed to access the value returned by the original method
+        - Call the original method
+            - By prefixing it with the keyword "super"
+            - Followed by a "."
+            - Then the name of the method (e.g. super.<method_name>)
+
+   
+Syntax:
+
+    class <parent_class_name> {
+        cosntructor(public <parent_class_property>, ...) {
+            ...
+        }
+
+        <parent_class_method>() {
+            ...
+        }
+    }
+
+    class <child_class_name> extends <parent_class_name> {
+        [constructor(public <child_class_property>, <parent_class_property>, ...) {
+            super(<parent_class_property>, ...);
+        }]
+
+        <child_class_method>() {
+            ...
+        }
+
+        override get <inherited_parent_method>() {
+            super.<parent_class_method>;
+            ...
+        }
+
+    }
+
+
+- In order to be reminded to ALWAYS use the keyword "override"
+    - When overriding inherited methods from the Parent class
+        - As they can be implicitly implemented without the "override" keyword
+
+    - Open the TypeScript configuration file "tsconfig.json"
+
+    - In the section "Type Checking"
+        - Uncomment the option "noImplicitOverride"
+            - Ensure that the value is "true"
+
+        - This prevents any implicit overriding of methods
+
