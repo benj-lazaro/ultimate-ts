@@ -1,0 +1,11 @@
+Private vs Protected Members
+----------------------------
+- Class members (i.e. property / method) given with the 
+    - Access modifier of "protected"
+        - Works EXACTLY as "private" members
+        - EXCEPT theese members are INHERITED
+
+
+    - NOTE: Best to avoid using the "protected" access modifier 
+        - UNLESS you REALLY KNOW what you are doing
+        - BETTER to stick with access modifiers "public" & "private"
