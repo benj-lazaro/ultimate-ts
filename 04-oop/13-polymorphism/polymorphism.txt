@@ -1,0 +1,20 @@
+Polymorphism
+------------
+- A core concept in object-oriented programming (OOP)
+    - Polymorphism = many forms
+    
+    - An object can take many different forms
+        - From a single class
+
+    - It provides the opportunity 
+        - To implement the "Open Closed" principle
+
+
+- The "Open Closed "principle states that
+    - A class should be OPEN for EXTENSION (i.e. inherit from)
+        - And CLOSED for MODIFICATION
+
+    - NOTE: Pragmatically, this principle can NOT be adhered 100% of the time
+        - It is costly to do so 
+        - It ONLY serves as a GUIDING PRINCIPLE
+
