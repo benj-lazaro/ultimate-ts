@@ -1,0 +1,33 @@
+Abstract Classes and Methods
+----------------------------
+- When creating an Abstract class
+    - Prefix the keyword "abstract" 
+        - Before the "class" keyword and the name of the class
+
+    - This PREVENTS an abstract class from being instantiated into an object
+        - Requires to be EXTENDED by a child class
+        - In order to be instantiated into an object
+
+
+- An Abstract class is like an uncooked meal
+    - Another (child) class has to extend it 
+
+    - Methods in an abstract class
+        - Has NO implementation
+        - Remove the pair of "{ }"
+        - Annotated it with the data type of "void"
+
+    - NOTE: Abstract methods ONLY exists WITHIN an abstract class
+
+
+Syntax:
+
+    abstract class <parent_class_name> {
+        ...
+
+        abstract <method_name>(): void;
+    }
+
+    class <child_class_name> extends <parent_class_name> {
+        ...
+    }
