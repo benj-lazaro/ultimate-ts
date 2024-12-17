@@ -1,0 +1,72 @@
+Interfaces
+----------
+- In OOP
+    - A class is a blueprint for creating an objects
+
+    - An interface define the shape (interface) of an object
+        - These are the inputs feed to an object
+        - Used by the TypeScript compiler for type checking
+
+    - The code needed to implement an interface is more concise
+        - Compared to defining an abstract class
+
+
+- An interface is PREFERRED OVER an abstract parent class WHEN
+    - The latter does NOT have logic that can be inherited by a child class
+    - It has method declarations with NO implementation
+
+    - An interface can ONLY have method declarations
+        - It can NOT have any method implementation
+        - This is referred as the "signature" of a method
+
+
+- An interface can be inherited by a child class
+    - Using the keyword "extends" similar to that of a normal / abstract parent class
+
+
+- When implementing an interface to a class
+    - Instead of using the keyword "extends"
+        - To inherit the properties & methods of an interface
+
+    - Use the keyword "implements"
+        - Followed by the name of the interface
+
+        - NOTE: TypeScript compilation error is triggered
+            - Due to uninitialized properties inherited from the interface
+
+            - To address this concern
+                - Click the name of the class
+                - Press CTRL + .
+                 - VS Code automatically generates the required code
+
+        - Declare a constructor method
+            - Pass the inherited interface properties as argument variables
+                - With their corresponding data type
+                - Prefix with an access modifier of "public"
+
+Syntax:
+
+    interface <interface_name> {
+        <property_name>: <data_type>;
+        ...
+        <method_name>(): void;
+        ...
+    }
+
+
+    interface <parent_interface_name> {
+        ...
+    }
+
+    interface <child_interface_name> extends <parent_interface_name> {
+        ...
+    }
+
+
+    class <class_name> implements <interface_name> {
+        constructor(<interface_property>: <data_type>) {}
+        ...
+        <inherited_method>(): void {
+            throw new Error("Method not implemented.");
+        }
+    }
