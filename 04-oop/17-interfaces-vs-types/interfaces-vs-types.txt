@@ -1,0 +1,24 @@
+Interfaces vs Types
+-------------------
+- In TypeScript
+    - Interfaces & Types Aliases can be used interchangeably
+    
+    - BOTH can be used to describe
+        - The "shape" of an object
+
+    - A class can implement 
+        - An Interface using the keyword "implemnts"
+
+
+Syntax:
+
+    interface <interface_name> {
+        <property_name>: <data_type>,
+    }
+
+
+    type <type_name> = {
+        <property_name>: <data_type>;
+    }
+
+
