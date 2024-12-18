@@ -1,0 +1,16 @@
+Understanding the Problem
+-------------------------
+- Generics addresses the situation that a user-defined class
+    - Needs to accomodate data of a different data type
+    - It offers a common and reusable solution
+
+
+- Generics removes the need to
+    - Refactor the data type of the properties passed to the constructor() method
+        - To use the data type of "any"
+        - NOTE: This disables TypeScript's "Type Checking" feature
+
+    - Duplicate the class and create variants of it
+        - Then rrefactor the data type of properties passed to the constructor() method
+        - To accomodate the data type required by the variant class
+    
