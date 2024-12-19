@@ -1,0 +1,39 @@
+Generic Functions
+-----------------
+- To define a Generic function
+    - It is done similarly to a normal function
+    
+    - Keyword "function"
+        - Followed by the name of the function
+        - Annotated by the data type of "T"
+        - Declare parameter variable(s) to be of data type "T"
+
+
+- To define a Generic method
+    - It is done similarly to a normal method of a class
+    
+    - Optionally use the keyword "static"
+        - Removes the code to instantiate an object from a class
+        - A Static method belongs ONLY to a class (NOT to the instantiated object)
+
+        - Otherwise, add the code to instantiate an object from a class
+    
+    - The name of method annontated by the data type of "T"
+        - Declare parameter variable(s) to be of data type "T"
+
+Syntax:
+
+    <function_name><T>(<parameter_variable>: T) {
+        ...
+    }
+
+    <function_name>(<argument_value>);
+
+
+    class <class_name> {
+        [static] <method_name><T>(<parameter_variable>: T) {
+            ...
+        }
+    }
+
+    <class_name>.<generic_method>(<argument_value>);
