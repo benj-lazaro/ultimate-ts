@@ -1,0 +1,31 @@
+Generic Classes
+---------------
+- To define a Generic class
+    - It is done similar to that of a normal class declaration
+        - Difference being is the data type of "T"
+            - Is annontated right after the name
+
+        - The data type "T" refers to Template
+            - Taken from C# nomenclature
+            - TypeScript's Generic class === C#'s Template class
+
+        - NOTE: Any name or letter can be used besides "T"
+            - e.g. TKey, TValue, etc.
+
+
+- On the Generic class' constructor method
+    - Assign the data type of "T" on ALL parameter variables
+
+
+- Instantiating an object from a Generic class
+    - Optional explicit annotation of the data type(s) of the value(s) passed
+    - TypeScript compiler automatically DETECTS the specific data type
+
+
+Syntax:
+
+    class <generic_class><TKey, TValue> {
+        constructor(<parameter_variable>: TKey, <parameter_variable>: TValue, ...) {}
+    }
+
+    let <object> = new <generic_class>[<<data_type>, <data_type>>](<value>, <value>);
