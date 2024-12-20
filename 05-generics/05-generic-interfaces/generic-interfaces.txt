@@ -1,0 +1,40 @@
+Generic Interfaces
+------------------
+- To define a Generic interface
+    - It is done similarly to a normal interface
+    
+    - Keyword "interface"
+        - Followed by the name of the interface 
+        - Annotated with a data type of "T"
+    
+    - Inside the Generic interface
+        - Annotate a property with the data type of "T" if applicable
+            - Use the "|" operator with the data type of "null"
+            - When expecting to process an error at a later time
+
+    - When declaring a function that returns an object based on the Generic interface
+        - Annotate the function name with the data type of "T"
+        - Annotate the return value with the name of the Generic interface 
+
+    - When calling the function
+        - Annotate the name with the name of the normal interface
+
+
+Syntax:
+    interface <generic_interface_name><T> {
+        <property_name>: [T |] <data_type>;
+        ...
+    }
+
+    // Function returns an object based on the Generic interface
+    function <function_name><T>(<paramter_name: <data_type>): <generic_interface_name><T> {
+        ...
+    }
+
+    // Normal interface
+    interface <interface_name> {
+        <property_name>: <data_type>;
+        ...
+    }
+
+    <function_name><interface_name>();
