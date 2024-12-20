@@ -1,0 +1,48 @@
+Generic Constraints
+-------------------
+- To constraint the Generic-type arguments passed to a Generic function
+    - On the appended data type of "T" 
+        - Just right after the function name
+    
+    - Add the keyword "extends"
+        - Followed by the allowed data type of an argument value
+        - Use the operator "|" to accept other data types
+
+    - When calling the Generic function
+        - With an argument that does NOT fit the given constraints 
+            - A TypeScript compilation error is generated
+            - Indicating the argument value is NOT assignable to the given constraints
+
+    - Constraint by an object
+        - Right after the keyword "extends"
+        - Pass an object with property | properties
+        - Constraints will be shaped by the properties of the object
+
+    - Constraint by an interface
+        - Right after the keyword "extends"
+        - Pass an interface
+        - Constraints will be shaped by the properties of the interface
+
+    - Constrains by a class
+        - Right after the keyword "extends"
+        - Pass a class
+        - Constraints will be shaped by the properties of the class
+
+
+Syntax:
+
+    function <name><T extends <data_type> | <data_type>(<args>: T): T {
+        ...
+    }
+        
+    function <name><T extends { <property>: <data_type> } | <data_type>(<args>: T): T {
+        ...
+    }
+
+    function <name><T extends <interface_name>>(<args>: T): T {
+        ...
+    }
+
+    function <name><T extends <class_name>>(<args>: T): T {
+        ...
+    }
