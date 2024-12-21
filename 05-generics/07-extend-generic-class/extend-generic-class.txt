@@ -1,0 +1,28 @@
+Extending Generic Classes
+-------------------------
+- Three scenarios to extend a Generic class 
+    - Pass the Generic type parameter
+    - Restrict the Generic type parameter
+    - Fix the Generic type parameter
+
+
+Syntax:
+
+    // Scenario #1: Passing Generic type parameter
+    class <parent_class_name><T> {
+        protected _<property_name>: <T> = <initial_value>;
+
+        <method_name>(<parameter>: T): void {
+            ....
+        }
+    }
+
+    class <child_class_name><T> extends <parent_class><T> {
+
+         <method_name>() {
+            ....
+        }
+    }
+
+
+    
