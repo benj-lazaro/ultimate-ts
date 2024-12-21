@@ -8,7 +8,7 @@ Extending Generic Classes
 
 Syntax:
 
-    // Scenario #1: Passing Generic type parameter
+    // Scenario #1: Pass the Generic type parameter
     class <parent_class_name><T> {
         protected _<property_name>: <T> = <initial_value>;
 
@@ -25,4 +25,19 @@ Syntax:
     }
 
 
-    
+    // Scenario #2: Restrict the Generic type parameter
+    class <child_class_name><T extends {<property>: <data_type>} >  extends <parent_class><T> {
+
+         <method_name>(<arg>: <data_type>): T | undefined {
+            ....
+        }
+    }
+
+
+    // Scenario #3: Fix the Generic type parameter
+    class <child_class_name> extends <parent_class><interface_name> {
+
+         <method_name>(<arg>: <data_type>): <interface_name> {
+            ....
+        }
+    }
