@@ -1,0 +1,41 @@
+The keyof Operator
+------------------
+- The "keyof" operator informs the TypeScript compiler that
+    - You are DIRECTLY working with the actual properties of an object
+    
+    - Used by annotating a parameter variable of the object's method
+        - With the keyword "keyof"
+
+        - Followed by "T"
+            - Represents the name of the interface used
+            - When instantiating an object using a Generic class
+
+            - Returns a union of properties of the given data type (i.e. interface name) 
+
+    - NOTE: Index key signature is used when
+        - DYNAMICALLY working with properties of an object
+
+    - Accessing non-existing properties
+        - Triggers a TypeScript compilation error
+
+
+Syntax:
+
+    interface <name> {
+        <property_name>: <data_type>;
+        ...
+    }
+
+    class <generic_class_name> {
+        protected _<property_name>: T = T;
+
+        // Method 
+        <method_name>(<object>: T): void {
+            ...
+        }
+
+        // Method works with an actual property an object or returns undefined
+        <method_name>(<object_property>: key of T, ...): T | undefined {
+            ...
+        }
+    }
