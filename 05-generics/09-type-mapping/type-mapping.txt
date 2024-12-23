@@ -1,0 +1,56 @@
+Type Mapping
+------------
+- In the need to create a new data type based on another (existing) data type
+    - This is referred as "Type Mapping"
+
+    - Then change the properties copied over
+        - To be readonly, optional, nullable and more...
+
+    - These types are built into TypeScript
+        - Referred as "Utility Types"
+        - They facilitate common type transformations
+        - Reference (https://www.typescriptlang.org/docs/handbook/utility-types.html)
+
+
+- In order to implement:
+    - Use Type Alias
+        - To declare a new data type
+
+    - Use Index signature, "in" & "keyof" operator
+        - Dynamically iterates through the properties of the existing data type
+            - Similarly works like a JavaScript "for" loop
+
+        - Then change them into their intended purpose (e.g. readonly, etc.)
+
+    - NOTE: Can annotate the named of the new data type with a Generic data type parameter (i.e. T)
+        - Provides more flexibility over a "hardcoded" existing data type
+
+
+Syntax:
+
+    // Existing data type
+    interface <interface_name> {
+        <property_name>: <data_type>;
+        ...
+    }
+
+    // New data type based on a specified existing data type & then assign with readonly properties
+    type <name> = {
+        readonly [<key_property> in keyof <existing_data_type>]: <existing_data_type>[<key_property>];
+    }
+
+    // New data type based on a Generic data type parameter & transform their properties as readonly
+    type <name><T> = {
+        [<key_property> in keyof T]: T[<key_property>];
+    }
+
+    // New data type based on any existing data type & transform their properties as optional (or partial)
+    type <name><T> = {
+        [<key_property> in keyof T]?: T[<key_property>];
+    }
+
+    // New data type based on any existing data type & transform their properties as nullable
+    type <name><T> = {
+        [<key_property> in keyof T]: T[<key_property>] | null;
+    }
+
