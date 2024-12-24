@@ -1,0 +1,33 @@
+Exercise
+--------
+1. Convert the function below to a Generic function
+
+    function echo(arg) {
+        return arg;
+    }
+
+
+2. When compiling the following piece of code
+    - We get an error message
+        - "Property name does not exist on type T
+    
+    - Solve this problem
+
+    function printName<T>(obj: T) {
+        console.log(obj.name)
+    }
+
+
+3. An Entity is a unique identifier
+    - The type of identifier, however, is dependent on the use case
+    - In some case, the ID might be a number, string or GUID
+    - Represent the entity using a Generic class
+
+
+4. Given the following interface
+    - What does "keyof User" return
+
+    interface User {
+        userId: number;
+        username: string;
+    }
