@@ -1,0 +1,30 @@
+What are Decorators
+-------------------
+- Decorators are attributes that are applied to
+    - Classes and their members (i.e. properties & methods)
+
+    - Offers the ability to change the behavior of said members
+        - Add new properties / methods
+        - Change the implementation of existing methods
+    
+    - NOTE: They are frequently used in frameworks like Angular & Vue
+        - These frameworks comes with built-in components
+
+    - Under the hood
+        - A decorator is basically a function
+            - That gets called by the JavaScript runtime (i.e. engine)
+        
+        - JavaScript runtime executes the code
+            - Calls the function
+            - In return, returns the corresponding class
+
+
+- Before writing a Decorator
+    - Enable the coresponding TypeScript compiler option
+        - Disabled as it is currently an experimental feature
+        - Current standards & implementation MIGHT CHANGE on future releases of TypeScript
+
+    - Open the file "tsconfig.json"
+        - In the section "Language and Environment"
+        - Uncomment the option "experimentalDecorators"
+        - Save the changes
