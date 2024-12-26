@@ -16,7 +16,7 @@ What are Decorators
         
         - JavaScript runtime executes the code
             - Calls the function
-            - In return, returns the corresponding class
+            - Returns the corresponding class
 
 
 - Before writing a Decorator
