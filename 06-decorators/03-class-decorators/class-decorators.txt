@@ -1,0 +1,52 @@
+Class Decorators
+----------------
+- To create a decorator to be applied to a class
+    - Create the corresponding function
+        - NOTE: Use Pascal naming convention in naming the function
+
+    - Required declaring a single parameter variable
+        - This represents the constructor function
+        - Common convention to name this parameter as "constructor"
+
+    - Annotate the parameter with the type of "function"
+        - JavaScript runtime will assume the function will be applied to a class
+
+    - Inside the function
+        - Access the constructor's "protoype" property
+        
+        - Add a new or modify an existing property to/of the class
+            - Assign the corresponding value
+
+        - Add a new or modify an existing method
+            - Assign an arrow function that contains the implementation of the method
+            
+
+- Every instance of the class
+    - The instantiated object will contain
+        - The properties and/or methods defined in the class decorator 
+
+    - NOTE: Alternative to using a class decorator is class inheritance
+        - It is just another tool in the toolbox
+
+    - Compiling the code
+        - The JavaScript runtime calls the decorator once
+            - Despite the absence of an instance of the associated class
+
+        - The generated JavaScript code
+            - Shows the a call to the function __decorate()
+            - With the corresponding defined decorator & class as arguments
+
+
+Syntax:
+
+    function <decorator_name>(constructor) {
+        constructor.protoype.<new_or_existing_class_property> = <value>;
+        ...
+        constructor.protoype.<new_or_existing_class_method> = () => {
+            // Method implementation
+        }
+    }
+
+    @Component
+    class <class_name>
+    
