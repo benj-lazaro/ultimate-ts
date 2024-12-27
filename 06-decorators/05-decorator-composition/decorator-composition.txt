@@ -1,0 +1,16 @@
+Decorator Composition
+---------------------
+- To apply multiple Decorators with class or its members
+
+- Decorators are called in the reversed order
+    - Recent or last decorator declared is called first
+        - Returned result is passed to the suceeding decorator
+
+
+Syntax:
+
+    @<decorator_name>
+    @<decorator_name>
+    class <class_name> {
+        ...
+    }
