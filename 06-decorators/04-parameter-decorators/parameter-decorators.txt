@@ -1,0 +1,32 @@
+Parameterized Decorators
+------------------------
+- Parameterized decorators allows to pass argument(s) to a decorator
+    - Uses a Decorator factory
+
+
+- A Decorator factory is a function that
+    - Acts as a factory for creating a Decorator
+        - NOTE: The function name uses the Pascal naming convention
+
+    - Returns an arrow function that
+        - Calls a Class decorator
+
+
+Syntax:
+
+    type <name> = {
+        <property_name>: <data_type>;
+        ...
+    }
+
+    function <name>(<arg>: <type_name>) {
+        return (constructor: Function) => {
+            ...
+        }
+    }
+
+    @Cmoponent(<arg>: <data_type>)
+    class <class_dectorator_name> {
+        ...
+    }
+
