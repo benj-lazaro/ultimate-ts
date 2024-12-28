@@ -1,0 +1,56 @@
+Method Decorators
+-----------------
+- To enhance method using Decorators
+    - On the line above the targeted class method
+        - Prefix "@"
+        - Followed by the name of the function to be called
+            - Use CamelCase naming convention
+
+    - On the function to be called by the decorator
+        - Requires three (3) different parameters
+            - 1st = the object that owns the target method
+                - This is of type "any"
+
+            - 2nd = name of the target method
+                - This is of type "string"
+
+            - 3rd = descriptor object or the target method
+                - This is of type "PropertyDescriptor"
+
+                - PropertyDescriptor is found in every property in an object
+                    - It has a descriptor that describes "that" property
+
+        - Reference (https://www.typescriptlang.org/docs/handbook/decorators.html#method-decorators)
+
+    - Inside the function
+        - Get a reference to the original method
+            - Declare a constant variable 
+                - Assign "descriptor.value" as value
+                - Annotate it with the type "Function"
+
+            - This copies the implementation of the original method
+
+        - Declare the enhanced version of the method
+            - Assign the object "descriptor.value" with a new function (without a name)
+                - Use the keyword "function" instead of an arrow function
+
+                - NOTE: An arrow function does NOT define
+                    - Their own "this" keyword
+
+                    - When redefining methods
+                        - ALWAYS use the function expression
+
+            - Copy the parameter of the original 
+                - Use the rest "..." operator
+                - Annotate it with type of "any"
+
+            - Calls the original method using the method .call()
+                - Passing "this" and "...args" as argument values
+
+
+    - NOTE: The current implementation requires
+        - Tentatively disabling a TypeScript compiler setting "noUnusedParameters"
+            - Save the changes
+
+        - Compile the TypeScript code
+            - Run the generated JavaScript code using Node
