@@ -1,0 +1,47 @@
+Accessor Decorators
+-------------------
+- To implement a decorator to apply on accessors (i.e. getters & setters)
+    - It is similar to a Method Decorator
+        - Under the hood, an accessor is just a method
+
+    - It has the same required parameters as a Method Decorator
+        - 1st = target of type "any"
+        - 2nd = methodName of type "string"
+        - 3rd = descriptor of type "PropertyDescriptor"
+
+    - It acquires a reference to the original method (i.e. getter / setter)
+        - Saving the reference to a constant named "original"
+            - To prevent from accidentally altering the original method
+
+        - Instead of using "descriptor.value"
+            - The former ONLY works for regular methods, NOT on acessors 
+
+            - Use "descriptor.get" instead 
+
+    - Redefine the accessor
+        - By defining & then assigning
+            - A modified a (unnamed) function expression to "descriptor.get"
+            - NOTE: getters can NOT receive any arguments
+
+        - Inside the function
+            - Use the method ".call()" on the constant "original"
+                - Call with optional chaining operator "?"
+                - NOTE: VS Code automatically add the operator
+
+            - Pass "this" as an arugment value
+
+            - Save the returned result to the constant named "result"
+
+            - Use the "typeof" operator on the value stored in "result"
+                - If it contains the intended type
+                    - Return the value of the constant "result"
+
+                - Otherwise, return the constant "result" itself
+        
+                - NOTE: Use a conditional expression
+                    - To simplify the code
+
+
+        
+        
+
