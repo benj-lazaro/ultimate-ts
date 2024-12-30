@@ -1,0 +1,42 @@
+Property Decorators
+-------------------
+- Property decorators enhances existing property(ies) of a class
+    - They are similar to Method decorators
+        - EXCEPT that they do NOT have a PropertyDescriptor included
+        - They needed to be defined in the corresponding decorator
+
+
+- To implement a Property Decorator
+    - Prefix the decorator named with "@"
+        - Use the CamelCase naming convention
+        - Place it at the line above the target property (of a class)
+
+    - Define the corresponding function
+        - With parameterized decorator
+
+        - Returns the actual (unnamed) Decorator function
+            - With two (2) parameters
+                - "target" of type "any"
+                - "propertyName" of type "string"
+
+            - It does NOT have a parameter of type "PropertyDescriptor"
+                - This to be defined within the Decorator function that is to be returned
+
+        - Inside the Decorator function
+            - Define a constant named "descriptor"
+                - Annotate it with type "PropertyDescriptor"
+
+        - Inside the constant "descriptor"
+            - Define a setter with an argument
+                - To perform validation checks on the passed argument value
+
+            - Define a getter
+                - To return the validated value by the setter
+
+        - Assign the descriptor of type "PropertyDescriptor" to the property "target"
+            - Calls "Object.defineProperty()"
+                - Pass three (3) argument values
+                    - "target" object
+                    - "propertyName" 
+                    - "descriptor" object
+
