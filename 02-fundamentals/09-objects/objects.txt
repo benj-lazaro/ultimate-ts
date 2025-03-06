@@ -1,15 +1,26 @@
 Objects
 -------
+- In JavaScript
+    - An object is dynamic
+    
+    - An additional property 
+        - Can be added throughout the execution of the program
+
+
+- In TypeScript
+    - An object is also dynamic
+
+    - An additional property can be explicitly annotated
+        - With the type of the property & its corresponding valuye
+
+
+
 - In JavaScript, an object is dynamic
     - Additional property can be added throughout the execution of the program
 
+    - Triggers a compilation error
+        - When accessing a non-existent property of an object 
 
-- In TypeScript, an object can be explicitly annotated with
-    - A property and its corresponding data type
-
-    - A compilation error is triggered
-        - Whenever a non-existent property of an object is accessed
-        
 
 Syntax
 
@@ -20,20 +31,21 @@ Syntax
 
 - The modifier "readonly"
     - Prefixed on an object's property
-    - Prevents the value of a property from being modified / udpated
-    
-    - An attempt to modify / update a property
-        - Triggers a compilation error
+        - Prevents the assigned value from being modified or updated
 
+    - An attempt to assign a new value
+        - Triggers a compilation error
+    
 
 - To define a method in an object
-    - On the property that stores the method
-        - Assign an arrow function as value
+    - Assign an arrow function to the property
+        - That will function as a method
 
-    - On the arrow function's parameter, enclosed in ()
-        - Define the parameter variable name
-        - Followed by its corresponding data type
+    - On the arrow function's parameter list
+        - Define the parameter variable(s)
+        - Followed by a ":"
+        - Then its corresponding type
 
-    - Inside th arrow function's body
-        - Return the data type of "void"
-    
+    - Inside the body of the arrow function
+        - Just write "void"
+        - It means that the method returns nothing (i.e. void)

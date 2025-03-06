@@ -1,4 +1,4 @@
-// An object with an explicitly declared properties with their corresponding data types
+// An object with an explicitly declared properties & their corresponding data types
 let employee: {
   readonly id: number;
   name: string;
@@ -7,3 +7,7 @@ let employee: {
 
 // Triggers an error after an attempt to modify an read-only property
 // employee.id = 100;
+
+console.log(employee);
+console.log(employee.id);
+console.log(employee.name);

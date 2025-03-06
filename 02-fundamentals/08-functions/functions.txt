@@ -1,20 +1,26 @@
 Functions
 ---------
-- BEST PRACTICE
-    - ALWAYS properly annotate the data type 
-        - Of a function's parameter(s) & return value
+- When declaring a function in TypeScript
+    - It is best practice to type annotate a function's
+        - Parameter(s)
+        - Return value
 
-        - NOTE: Provides the benefit of immediately triggering a compilation error
-            - When a return value is that of a different data type
-    
-    - Annotate the return value with the data type "void"
-        - When a function does NOT return a value
-    
-    - Placing a "?" right after a parameter variable
-        - Makes the specific parameter OPTIONAL 
+    - This provides the benefit of triggering a compilation error
+        - When the return value is of different type
 
-    - Placing a "=" followed by a corresponding value after a parameter variable
-        - Assigns the value as the default value for the corresponding parameter variable
+    - If a function does NOT return a value
+        - Annotate it with the type of "void"
+
+    - To make a parameter variable OPTIONAL
+        - Add a "?" right after a parameter variable
+
+    - To assgin a default value for a parameter variable
+        - Add a "=" operator
+            - Followed by the default value
+            - After a parameter variable
+
+        - The compiler will infer the type
+            - Based on the default value's type
 
 
 Syntax:
@@ -23,22 +29,34 @@ Syntax:
         ...
     }
 
+    // Optional parameter variable
+    function <name>(<parameter>[?]: <data_type>): <return_value_data_type> {
+        ...
+    }
 
-- To help detect unintended bugs in the code
+    // Default parameter value
+    function <name>(<parameter>[= <default_value>]): <return_value_data_type> {
+        ...
+    }
+
+
+- To detect unintended bugs in the TypeScript code
     - Open the file "tsconfig.json"
-        - Proceed to the section "Type Checking"
-        
-    - The following compiler options are NOT part of the enabled "strict" setting
-        - Enable the option "noUsedParameters"
-            - Triggers an error for the presence of unused parameter variable(s)
+    
+    - NOTE: The following compiler options are NOT part of the "strict" settings
 
-        - Enable the option "noImplicitReturns"
-            - Triggers an error when a function returns a value of "undefined"
-            
-            - By default, JavaScript functon implicitly returns a value of "undefined"
+        - Uncomment (i.e. enable) option "noUsedParameters"
+            - Triggers a compilation error in the presence of
+                - Unused function parameter variable(s)
 
-        - Enable the option "noUnusedLocals"
-            - Triggers an error when a declared local variable(s) whose value is NEVER read / used
+        - Uncomment (i.e. enable) option "noImplicitReturns"
+            - Triggers a compilation error when a function
+                - Returns a value of "undefined
 
+            - By default, a JavaScript function implicitly
+                - Returns a value of "undefined"
 
+        - Uncomment (i.e. enable) option "noUnusedLocals"
+            - Triggers a compilation error when a declared local variable(s)
+                - Whose assigned value is NEVER read or used
     

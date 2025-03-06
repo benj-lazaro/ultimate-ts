@@ -1,6 +1,6 @@
 Built-in Types
 --------------
-- JavaScript has built-in types
+- JavaScript has the following built-in (data) types:
     - number
     - string
     - boolean
@@ -9,7 +9,7 @@ Built-in Types
     - object
 
 
-- TypeScript has the same built-in types with the adddition of the following:
+- TypeScript comes with the same built-in types and of the following:
     - any
     - unknown
     - never
@@ -17,17 +17,21 @@ Built-in Types
     - tuple
 
 
-- In TypeScript, a variable is NOT necessarily needed to be annotated with a data type
-    - The TypeScript compiler infers or detects the data type
-        - Based on the initial value
+- In TypeScript
+    - A variable is NOT NECESSARILY needed to be annotated with a type
 
-        - NOTE: Hovering the mouse point over a variable
-            - VS code reveals the annotated built-in type of a variable
+    - The compiler can INFER (detects) the type
+        - Based on the assigned initial value
 
-    - For variables without an initial value
-        - The TypeScript compiler annotates it with the "any" data type
+        - NOTE: Hovering the mouse pointer on a variable
+            - VS Code reveals the type inferred assign to the variable
 
+    - A variable without an initial value
+        - The compiler implicitly annotates it with the type "any"
 
-- NOTE: built-in type of number
-    - Large numbers can be visually separated using an underscore (_) character
-    - This is ONLY for readability purposes
+    - NOTE: A value of type "number"
+        - Large value can be VISUALLY SEPARATED using "_"
+            - e.g. 10_000_00
+
+        - This is for READABILITY purposes ONLY
+        

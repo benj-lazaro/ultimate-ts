@@ -1,19 +1,23 @@
 Enums
 -----
 - An enum is a list of related constants
-    - Naming an enum uses the Pascal naming convention
-        - First letter of EVERY WORD is capitalized
+    - An enum is named using the Pascal naming convention
+        - Wherein the first letter of EVERY WORD is capitalized
 
-    - By default, the 1st enum element is IMPLICTLY assigned with a number value of 0
-        - Succeeding elements with the previous number value + 1
+    - By default
+        - The first element is implictly assigned with a value of 0 (a number type)
 
-        - This can be overriden by EXPLICITLY assigning a new value
-            - On the 1st enum element
-            - Or on ALL enum elements
+        - Succeeding elements are assigned with
+            - Previous value + 1
+        
+        - NOTE: This can be overriden
+            - By explicitly assigning a new value on either:
+                - The first element of an enum
+                - All elements of an enum
 
-    - Prefixing the keyword "const" on the name of an enum
-        - TypeScript compiler generates a more OPTIMIZED JavaScript code
-    
+    - Prefixing an enum with the keyword "const"
+        - The compiler generates an optmized JavaScript code
+
 
 Syntax:
 

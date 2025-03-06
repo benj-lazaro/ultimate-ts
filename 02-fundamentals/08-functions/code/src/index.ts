@@ -5,7 +5,8 @@ function calculateTax(income: number, taxYear = 2022): number {
   return income * 1.3;
 }
 
+const result = calculateTax(10_000);
+console.log(result);
+
 // A function that does NOT return value
 function doesNotReturnValue(): void {}
-
-calculateTax(10_000);

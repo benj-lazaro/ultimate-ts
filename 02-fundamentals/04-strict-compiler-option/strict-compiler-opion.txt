@@ -1,0 +1,11 @@
+Strict Compiler Option
+----------------------
+- In the TypeScript compiler's configuration file
+    - The setting "strict" enables a range of type-checking behavior
+
+    - The exact settings are dependent
+        - On the version of the TypeScript compiler used
+
+    - There are other compiler options made available
+        - After enabling the setting "strict"
+        - Reference (https://www.typescriptlang.org/tsconfig/#strict)
