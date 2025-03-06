@@ -1,39 +1,42 @@
 What is TypeScript
 ------------------
-- TypeScript is a programming language
-    - Created by Microsoft
-
+- TypeScript is a programming language created by Microsoft
     - Designed to address the shortcomings of JavaScript
 
-    - Built on top of JavaScript
-        - Essentially a JavaScript file is a valid TypeScript file
+    - It is built on top of JavaScript
+        - Essentially a JavaScript code is a VALID TypeScript code
 
 
 - Benefits
     - Static Typing
-        - Able to identify the data type of a variable at compile time / during coding
-        - TypeScript is essentially "JavaScript with Type Checking"
+        - Identify the data type of a variable during coding
+        - TypeScript = JavaScript with Type Checking
 
     - Code Completion
+
     - Refactoring
-    - Shorthand Notations 
+
+    - Shorthand Notations
         - Supported by modern-day code editors
-        - That offers these productivity features
+            - Offers productivity features
 
 
 - Drawbacks
-    - The complitation step is ALWAYS involved
-        - Due to modern-day browsers do NOT undrestand TypeScript code
+    - Compilation step is ALWAYS involved
+        - As modern-day browsers do NOT UNDERSTAND TypeScript code
 
-        - Requires for the TypeScript compilter to TRANSLATE TypeScript into JavaScript code
-            - This process is known as TRANSPILATION
-
-    - Requires discipline (and fore thought) when writing TypeScript code
+    - Requires the TypeScript compilter
+        - To translate TypeScript into JavaScript code
+        - Process known as Transpilation
+    
+    - Requires discipline and forethought when writing TypeScript code
         - Discourages writing code quickly
 
-        - More time is wasted on coding large projects in JavaScript
-            - This requires time to catch nasty bugs
 
-        - Recommended to use
-            - TypeScript for meduim to large projects
-            - JavaScript for simple projects
+- More time is wasted when writing large projects in JavaScript
+    - Due to the time to catch nasty (and subtle) bugs
+
+
+- Rule of thumb
+    - Use TypeScript for meduim to large projects
+    - Use JavaScript for small (simple) projects

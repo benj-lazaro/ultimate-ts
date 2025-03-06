@@ -1,26 +1,21 @@
 Setting Up the Development Environment
 --------------------------------------
-- Node.js
-    - Download & install the latest LTS (Long Term Support) version
-    - Website (https://nodejs.org/en)
+- Tools needed for this course
+    - Node.js
+        - Install the latest LTS (Long Term Support) release
+        - Website (https://nodejs.org/en)
+
     
-    - Use the NPM (Node Package Manager) to install
-        - The TypeScript compiler
-        - As well as other 3rd party libraries / packages
+    - TypeScript compiler
+        - Use NPM (Node Package Manager) to download & install the compiler
 
+            sudo npm i -g TypeScript
 
-- TypeScript Compiler
-    - To install the latest compiler using npm via terminal
+        - Post-installation check
+            
+            tsc -v
 
-        sudo npm i -g TypeScript
-
-
-    - Post installation check
-
-        tsc -v
-
-
-- Visual Studio Code (VS Code)
-    - Preferred code editor
-    - Download & install the latest version
-    - Website (https://code.visualstudio.com/)
+    
+    - Visual Studio Code (VS Code)
+        - Download and install the latest version
+        - Website (https://code.visualstudio.com/)

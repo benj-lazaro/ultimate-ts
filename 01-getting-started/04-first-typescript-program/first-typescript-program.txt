@@ -1,36 +1,43 @@
 Your First TypeScript Program
 -----------------------------
 - Create a new file named "index.ts"
-    - Every TypeScript file should have the file extension ".ts"
-    
+    - A TypeScript code has the filename extension of ".ts"
 
-- Declare a variable named "age"
-    - Annotate with it with the data type of "number"
-        - By typing a ":" followed by a variable (i.e. number)
-        - This annotates or explains the value assigned to the variable
+
+- Declare a new variable named "age"
+    - Annotate the data type of the variable
+        - Which is a "number"
+
+    - This is performed by
+        - Placing a ":" RIGHT AFTER the name of the variable
+        - Followed by the intended data type (e.g. number)
+        - Then a "=" and the initial value
+        - End the statement with a ";"
         
-        - NOTE: This is purely for the TypeScript compiler ONLY
-            - The TRANSPILED JavaScript code does NOT carry over said annotation
+            let age: number = 20;
 
-    - Assign the variable "age" with an initial value of 20
-
-        let age: number = 20;
+        - NOTE: This is known as "Type Annotation"
 
 
-- Then compile the TypeScript file on terminal
+- Compile the TypeScript code
+    - Open VS Code's integrated terminal
 
-    tsc index.ts
+    - Compile the file "index.ts"
+
+        tsc index.ts
+
+    - A corresponding JavaScript file of the same name will be generated
+        - NOTE: It has the filename extension of ".js"
+
+    - Opening the JavaScript file reveals similar code with that of TypeScript
+        - EXCEPT the Type Annotation of the variable is GONE
 
 
-- Produces a corresponding JavaScript file named "index.js"
-    - Contains the corresponding JavaScript code
+- By default, the TypeScript compiler uses
+    - The ES5 implementation of JavaScript
 
-        var age = 20;
+    - ECMAScript is the standard SPECIFICATION of a language
+        - JavaScript is the IMPLEMENTATION of the ECMAScript specification
 
-    - By default, the TypeScript compiler uses the ES5 implementation of JavaScript
-        - ECMAScript is the standard or specification of a language
-        - JavaScript is the implementation of said ECMAScript standard / specification
-
-    - ES5 or ES2015 is an old standard / specification 
-        - It has been around for a long-time
-        - Most of its features have been implemented on all browsers
+    - ES5 or more specifically ES2015 is an old standard / specification
+        - Most of its features have been implementation on ALL browsers
